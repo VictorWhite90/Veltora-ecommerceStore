@@ -1,0 +1,5 @@
+﻿<svg xmlns='http://www.w3.org/2000/svg' width='600' height='600'>
+  <rect width='600' height='600' rx='32' fill=''/>
+  <text x='50%' y='50%' font-family='"Segoe UI", sans-serif' font-size='40' fill='white' dominant-baseline='middle' text-anchor='middle'></text>
+  <text x='50%' y='58%' font-family='"Segoe UI", sans-serif' font-size='18' fill='white' opacity='0.85' dominant-baseline='middle' text-anchor='middle'>Image coming soon</text>
+</svg>
