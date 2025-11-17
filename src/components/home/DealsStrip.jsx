@@ -75,7 +75,7 @@ const DealsStrip = () => {
               />
             ))}
           </div>
-          <button className="mt-6 flex items-center gap-2 text-sm font-semibold text-navy-600 hover:text-navy-700">
+          <button className="mt-6 flex items-center gap-2 text-sm font-semibold text-red-600 hover:text-red-700">
             See all deals <Sparkles className="h-4 w-4" />
           </button>
         </>

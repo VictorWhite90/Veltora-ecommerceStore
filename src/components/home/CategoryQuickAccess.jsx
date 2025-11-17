@@ -42,7 +42,7 @@ const CategoryQuickAccess = () => {
           </h2>
         </div>
         <button
-          className="text-sm font-semibold text-navy-600 hover:text-navy-700"
+          className="text-sm font-semibold text-red-600 hover:text-red-700"
           onClick={() => navigate('/categories')}
         >
           View all categories
@@ -56,10 +56,10 @@ const CategoryQuickAccess = () => {
             <button
               key={category.id}
               onClick={() => navigate(`/category/${category.id}`)}
-              className="group flex flex-col gap-3 rounded-2xl border border-gray-100 bg-gray-50/60 p-4 text-left transition-all hover:-translate-y-1 hover:border-navy-600 hover:bg-white hover:shadow-xl"
+              className="group flex flex-col gap-3 rounded-2xl border border-gray-100 bg-gray-50/60 p-4 text-left transition-all hover:-translate-y-1 hover:border-red-600 hover:bg-white hover:shadow-xl"
             >
               <div
-                className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white text-navy-600 shadow"
+                className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white text-red-600 shadow"
                 style={{ color: category.accent }}
               >
                 <Icon className="h-6 w-6" />

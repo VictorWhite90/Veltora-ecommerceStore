@@ -108,7 +108,7 @@ const CheckoutPage = () => {
                     value={formData.fullName}
                     onChange={handleInputChange}
                     required
-                    className="w-full rounded-2xl border border-gray-200 px-4 py-3 text-sm focus:border-navy-600 focus:outline-none focus:ring-2 focus:ring-navy-600/20"
+                    className="w-full rounded-2xl border border-gray-200 px-4 py-3 text-sm focus:border-red-600 focus:outline-none focus:ring-2 focus:ring-red-600/20"
                     placeholder="Enter your full name"
                   />
                 </div>
@@ -124,7 +124,7 @@ const CheckoutPage = () => {
                       value={formData.email}
                       onChange={handleInputChange}
                       required
-                      className="w-full rounded-2xl border border-gray-200 px-4 py-3 text-sm focus:border-navy-600 focus:outline-none focus:ring-2 focus:ring-navy-600/20"
+                      className="w-full rounded-2xl border border-gray-200 px-4 py-3 text-sm focus:border-red-600 focus:outline-none focus:ring-2 focus:ring-red-600/20"
                     />
                   </div>
                   <div>
@@ -138,7 +138,7 @@ const CheckoutPage = () => {
                       value={formData.phone}
                       onChange={handleInputChange}
                       required
-                      className="w-full rounded-2xl border border-gray-200 px-4 py-3 text-sm focus:border-navy-600 focus:outline-none focus:ring-2 focus:ring-navy-600/20"
+                      className="w-full rounded-2xl border border-gray-200 px-4 py-3 text-sm focus:border-red-600 focus:outline-none focus:ring-2 focus:ring-red-600/20"
                     />
                   </div>
                 </div>
@@ -148,7 +148,7 @@ const CheckoutPage = () => {
             {/* Delivery Address */}
             <div className="rounded-3xl border border-gray-100 bg-white p-6 shadow-sm">
               <h2 className="mb-4 flex items-center gap-2 text-xl font-bold text-gray-900">
-                <MapPin className="h-5 w-5 text-navy-600" />
+                <MapPin className="h-5 w-5 text-red-600" />
                 Delivery Address
               </h2>
               <div className="space-y-4">
@@ -162,7 +162,7 @@ const CheckoutPage = () => {
                     value={formData.address}
                     onChange={handleInputChange}
                     required
-                    className="w-full rounded-2xl border border-gray-200 px-4 py-3 text-sm focus:border-navy-600 focus:outline-none focus:ring-2 focus:ring-navy-600/20"
+                    className="w-full rounded-2xl border border-gray-200 px-4 py-3 text-sm focus:border-red-600 focus:outline-none focus:ring-2 focus:ring-red-600/20"
                   />
                 </div>
                 <div className="grid gap-4 sm:grid-cols-3">
@@ -176,7 +176,7 @@ const CheckoutPage = () => {
                       value={formData.city}
                       onChange={handleInputChange}
                       required
-                      className="w-full rounded-2xl border border-gray-200 px-4 py-3 text-sm focus:border-navy-600 focus:outline-none focus:ring-2 focus:ring-navy-600/20"
+                      className="w-full rounded-2xl border border-gray-200 px-4 py-3 text-sm focus:border-red-600 focus:outline-none focus:ring-2 focus:ring-red-600/20"
                     />
                   </div>
                   <div>
@@ -189,7 +189,7 @@ const CheckoutPage = () => {
                       value={formData.state}
                       onChange={handleInputChange}
                       required
-                      className="w-full rounded-2xl border border-gray-200 px-4 py-3 text-sm focus:border-navy-600 focus:outline-none focus:ring-2 focus:ring-navy-600/20"
+                      className="w-full rounded-2xl border border-gray-200 px-4 py-3 text-sm focus:border-red-600 focus:outline-none focus:ring-2 focus:ring-red-600/20"
                     />
                   </div>
                   <div>
@@ -201,7 +201,7 @@ const CheckoutPage = () => {
                       name="zipCode"
                       value={formData.zipCode}
                       onChange={handleInputChange}
-                      className="w-full rounded-2xl border border-gray-200 px-4 py-3 text-sm focus:border-navy-600 focus:outline-none focus:ring-2 focus:ring-navy-600/20"
+                      className="w-full rounded-2xl border border-gray-200 px-4 py-3 text-sm focus:border-red-600 focus:outline-none focus:ring-2 focus:ring-red-600/20"
                     />
                   </div>
                 </div>
@@ -211,30 +211,30 @@ const CheckoutPage = () => {
             {/* Payment Method */}
             <div className="rounded-3xl border border-gray-100 bg-white p-6 shadow-sm">
               <h2 className="mb-4 flex items-center gap-2 text-xl font-bold text-gray-900">
-                <CreditCard className="h-5 w-5 text-navy-600" />
+                <CreditCard className="h-5 w-5 text-red-600" />
                 Payment Method
               </h2>
               <div className="space-y-3">
-                <label className="flex cursor-pointer items-center gap-3 rounded-2xl border-2 border-navy-600 bg-navy-50 p-4">
+                <label className="flex cursor-pointer items-center gap-3 rounded-2xl border-2 border-red-600 bg-red-50 p-4">
                   <input
                     type="radio"
                     name="paymentMethod"
                     value="card"
                     checked={formData.paymentMethod === 'card'}
                     onChange={handleInputChange}
-                    className="h-4 w-4 text-navy-600"
+                    className="h-4 w-4 text-red-600"
                   />
-                  <CreditCard className="h-5 w-5 text-navy-600" />
+                  <CreditCard className="h-5 w-5 text-red-600" />
                   <span className="font-semibold text-gray-900">Credit/Debit Card</span>
                 </label>
-                <label className="flex cursor-pointer items-center gap-3 rounded-2xl border border-gray-200 p-4 hover:border-navy-600">
+                <label className="flex cursor-pointer items-center gap-3 rounded-2xl border border-gray-200 p-4 hover:border-red-600">
                   <input
                     type="radio"
                     name="paymentMethod"
                     value="cash"
                     checked={formData.paymentMethod === 'cash'}
                     onChange={handleInputChange}
-                    className="h-4 w-4 text-navy-600"
+                    className="h-4 w-4 text-red-600"
                   />
                   <span className="font-semibold text-gray-900">Cash on Delivery</span>
                 </label>

@@ -78,14 +78,14 @@ export const promoBanners = [
     id: 'free-delivery',
     title: 'Free Delivery over $99',
     description: 'Applies to fashion, health & beauty, phones & tablets categories.',
-    image: '/images/banners/promo-delivery.jpg',
+    image: 'https://images.unsplash.com/photo-1607082349566-187342175e2f?w=800&h=400&fit=crop',
     href: '/promo/free-delivery',
   },
   {
     id: 'official-store',
     title: 'Official Store Guarantee',
     description: '100% authentic, 15-day returns, Jumia Protect warranty.',
-    image: '/images/banners/promo-official-store.jpg',
+    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=400&fit=crop',
     href: '/promo/official-stores',
   },
 ];

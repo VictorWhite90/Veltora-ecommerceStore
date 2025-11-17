@@ -24,6 +24,11 @@ const ProductRail = ({ title, subtitle, filter }) => {
 
   const filtered = products.filter(filter || (() => true)).slice(0, 8);
 
+  // Don't render section if no products found (to avoid gaps)
+  if (!loading && filtered.length === 0) {
+    return null;
+  }
+
   if (loading) {
     return (
       <section className="rounded-3xl bg-white p-6 shadow-lg">
@@ -49,19 +54,17 @@ const ProductRail = ({ title, subtitle, filter }) => {
           </p>
           <h2 className="text-2xl font-bold text-gray-900">{title}</h2>
         </div>
-        <button className="text-sm font-semibold text-navy-600 hover:text-navy-700">
+        <button className="text-sm font-semibold text-red-600 hover:text-red-700">
           See all
         </button>
       </div>
 
-      {filtered.length > 0 ? (
+      {filtered.length > 0 && (
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
           {filtered.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
         </div>
-      ) : (
-        <div className="py-12 text-center text-gray-500">No products found</div>
       )}
     </section>
   );

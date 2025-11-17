@@ -48,7 +48,7 @@ const Footer = () => {
           {/* Brand Section */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 bg-navy-600 rounded-lg flex items-center justify-center">
+              <div className="w-10 h-10 bg-red-600 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-xl">V</span>
               </div>
               <div>
@@ -63,15 +63,15 @@ const Footer = () => {
             {/* Contact Info */}
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
-                <Mail className="w-4 h-4 text-navy-400" />
+                <Mail className="w-4 h-4 text-red-400" />
                 <span className="text-sm">victorwhite590@gmail.com</span>
               </div>
               <div className="flex items-center space-x-3">
-                <Phone className="w-4 h-4 text-navy-400" />
+                <Phone className="w-4 h-4 text-red-400" />
                 <span className="text-sm">09066248405</span>
               </div>
               <div className="flex items-center space-x-3">
-                <MapPin className="w-4 h-4 text-navy-400" />
+                <MapPin className="w-4 h-4 text-red-400" />
                 <span className="text-sm">FCT Abuja</span>
               </div>
             </div>
@@ -157,11 +157,11 @@ const Footer = () => {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-navy-500 text-white placeholder:text-gray-500"
+                className="flex-1 px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 text-white placeholder:text-gray-500"
               />
-              <button className="px-6 py-2 bg-navy-600 hover:bg-navy-700 text-white font-medium rounded-lg transition-colors">
-                Subscribe
-              </button>
+                      <button className="px-6 py-2 bg-red-600 hover:bg-red-700 text-white font-medium rounded-lg transition-colors">
+                        Subscribe
+                      </button>
             </div>
           </div>
         </div>
@@ -184,7 +184,7 @@ const Footer = () => {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-9 h-9 bg-gray-800 hover:bg-navy-600 rounded-lg flex items-center justify-center transition-colors"
+                          className="w-9 h-9 bg-gray-800 hover:bg-red-600 rounded-lg flex items-center justify-center transition-colors"
                   aria-label={social.label}
                 >
                   <social.icon className="w-4 h-4" />

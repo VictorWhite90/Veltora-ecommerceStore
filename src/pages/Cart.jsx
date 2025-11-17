@@ -61,7 +61,7 @@ const CartPage = () => {
                   <div className="flex-1 space-y-2">
                     <Link
                       to={`/product/${item.id}`}
-                      className="text-lg font-semibold text-gray-900 hover:text-navy-600"
+                      className="text-lg font-semibold text-gray-900 hover:text-red-600"
                     >
                       {item.title}
                     </Link>

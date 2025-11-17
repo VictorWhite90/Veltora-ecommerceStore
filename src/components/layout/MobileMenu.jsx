@@ -15,11 +15,13 @@ import {
   ChevronRight,
 } from 'lucide-react';
 import { mainCategories } from '../../data/categories';
+import { useCartStore } from '../../store/cartStore';
 
 const MobileMenu = ({ isOpen, onClose }) => {
   // Mock auth state - replace with Zustand
   const isAuthenticated = false;
   const user = { name: 'John Doe', email: 'john@example.com' };
+  const wishlistCount = useCartStore((state) => state.getWishlistCount());
 
   // Prevent body scroll when menu is open
   React.useEffect(() => {
@@ -35,7 +37,7 @@ const MobileMenu = ({ isOpen, onClose }) => {
 
   const menuItems = [
     { icon: Home, label: 'Home', path: '/' },
-    { icon: Heart, label: 'Wishlist', path: '/wishlist' },
+    { icon: Heart, label: 'Wishlist', path: '/wishlist', badge: wishlistCount },
     { icon: Package, label: 'Orders', path: '/dashboard/orders', authRequired: true },
     { icon: User, label: 'Profile', path: '/dashboard', authRequired: true },
     { icon: Settings, label: 'Settings', path: '/dashboard/settings', authRequired: true },
@@ -124,18 +126,22 @@ const MobileMenu = ({ isOpen, onClose }) => {
                     className="flex items-center justify-between px-6 py-4 hover:bg-gray-50 transition-colors group"
                   >
                     <div className="flex items-center space-x-3">
-                      <item.icon className="w-5 h-5 text-gray-500 group-hover:text-navy-600 transition-colors" />
+                      <item.icon className={`w-5 h-5 transition-colors ${
+                        item.label === 'Wishlist' 
+                          ? 'text-red-600' 
+                          : 'text-gray-500 group-hover:text-red-600'
+                      }`} />
                       <span className="text-gray-700 group-hover:text-gray-900 font-medium">
                         {item.label}
                       </span>
                     </div>
                     <div className="flex items-center space-x-2">
-                      {item.badge && (
-                        <span className="px-2 py-1 bg-red-500 text-white text-xs font-bold rounded-full">
+                      {item.badge && item.badge > 0 && (
+                        <span className="px-2 py-1 bg-red-600 text-white text-xs font-bold rounded-full">
                           {item.badge}
                         </span>
                       )}
-                      <ChevronRight className="w-4 h-4 text-gray-400 group-hover:text-navy-600 transition-colors" />
+                      <ChevronRight className="w-4 h-4 text-gray-400 group-hover:text-red-600 transition-colors" />
                     </div>
                   </Link>
                 );

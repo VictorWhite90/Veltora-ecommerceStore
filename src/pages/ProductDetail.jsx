@@ -133,7 +133,7 @@ const ProductDetailPage = () => {
                     onClick={() => setSelectedImageIndex(index)}
                     className={`rounded-2xl border ${
                       index === selectedImageIndex
-                        ? 'border-navy-600'
+                        ? 'border-red-600'
                         : 'border-gray-200'
                     } bg-gray-50 p-2`}
                   >
@@ -201,7 +201,7 @@ const ProductDetailPage = () => {
                     {product.variations.map((variation) => (
                       <button
                         key={variation.value}
-                        className="rounded-full border border-gray-200 px-4 py-2 text-sm font-semibold text-gray-600 transition hover:border-navy-600 hover:text-navy-600"
+                        className="rounded-full border border-gray-200 px-4 py-2 text-sm font-semibold text-gray-600 transition hover:border-red-600 hover:text-red-600"
                       >
                         {variation.label}
                       </button>
@@ -265,21 +265,21 @@ const ProductDetailPage = () => {
 
             <div className="mt-6 grid gap-4 text-sm text-gray-600 lg:grid-cols-3">
               <div className="flex items-center gap-3 rounded-2xl border border-gray-100 p-3">
-                <Truck className="h-5 w-5 text-navy-600" />
+                <Truck className="h-5 w-5 text-red-600" />
                 <div>
                   <p className="font-semibold text-gray-900">Fast Delivery</p>
                   <p>{product.shipping?.estimatedDays || '3-5 days'}</p>
                 </div>
               </div>
               <div className="flex items-center gap-3 rounded-2xl border border-gray-100 p-3">
-                <ShieldCheck className="h-5 w-5 text-navy-600" />
+                <ShieldCheck className="h-5 w-5 text-red-600" />
                 <div>
                   <p className="font-semibold text-gray-900">Warranty</p>
                   <p>Manufacturer warranty included</p>
                 </div>
               </div>
               <div className="flex items-center gap-3 rounded-2xl border border-gray-100 p-3">
-                <RotateCcw className="h-5 w-5 text-navy-600" />
+                <RotateCcw className="h-5 w-5 text-red-600" />
                 <div>
                   <p className="font-semibold text-gray-900">Return Policy</p>
                   <p>15 days free returns</p>

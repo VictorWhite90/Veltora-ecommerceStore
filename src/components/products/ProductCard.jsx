@@ -102,7 +102,7 @@ const ProductCard = ({ product }) => {
         <button
           onClick={handleToggleWishlist}
           className={`absolute right-4 top-4 z-30 flex h-9 w-9 items-center justify-center rounded-full bg-white/90 shadow transition-colors pointer-events-auto ${
-            isInWishlist ? 'text-red-600' : 'text-gray-500 hover:text-navy-600'
+            isInWishlist ? 'text-red-600' : 'text-gray-500 hover:text-red-600'
           }`}
         >
           <Heart className={`h-4 w-4 ${isInWishlist ? 'fill-current' : ''}`} />
@@ -153,7 +153,7 @@ const ProductCard = ({ product }) => {
           </div>
 
           <div className="mt-3 flex items-center gap-2 text-xs text-gray-500">
-            <ShieldCheck className="h-4 w-4 text-navy-600" />
+                  <ShieldCheck className="h-4 w-4 text-red-600" />
             <span>{seller}</span>
           </div>
 
